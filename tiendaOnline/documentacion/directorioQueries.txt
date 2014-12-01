@@ -1,0 +1,25 @@
+SELECT * FROM productos WHERE existencias > 0";
+
+	Este query me sirve para saber cuantas unidades aun quedan del producto q se indique
+
+SELECT * FROM imagenesproductos WHERE idproducto = ".$fila['id']." LIMIT 1";
+
+	Este query me sirve para abrir las imagenes del producto al que se le hace click
+
+SELECT * FROM productos WHERE id= ".$_GET['id']." LIMIT 1";
+
+	Este query me sirve para entrar a ver los productos cuando se le de click a productos
+
+SELECT * FROM clientes WHERE usuario = '".$_POST['usuario']."' AND contrasena = '".$_POST['contrasena']."'";
+
+	Este query me sirve para que los clientes puedan entrar o iniciar sesion.
+
+SELECT * FROM pedidos WHERE idcliente = '".$_SESSION['usuario']."'ORDER BY fecha DESC LIMIT 1";
+	
+	Este query me sirve para saber que pedido corresponde a un cliente en especifico
+
+INSERT INTO pedidos VALUES (NULL,".$_SESSION['usuario'].",'".date('U')."','0')";
+
+	Este query me sirve para insertar los pedidos que el cliente realice en la tabla de pedidos.
+
+
